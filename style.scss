@@ -1,0 +1,49 @@
+*{
+    margin: 0px 9px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    body{
+        font-family: sans-serif;
+        font-size: 55px;
+    }
+}
+
+.cointainer{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 30px;
+    [class^="row"]{
+
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+ 
+    [class^="box"]{
+        background-color: #c4c4c4;
+        border: 2px solid black;
+        width: (100%/3);
+        height: (100vh/3);
+        display: grid;
+        place-content: center;
+        
+    }
+
+}
+
+@media(max-width:650px){
+    .cointainer{
+
+    
+    [class^="row"]{
+        flex-direction: column;
+    }
+
+    [class^="box"]{
+        max-width: 100%;
+    }
+
+}
+}
